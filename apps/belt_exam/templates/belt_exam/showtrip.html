@@ -1,0 +1,35 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<title>Python Belt Exam - Rodrigo Amaral</title>
+
+</head>
+<body>
+	<nav class="navbar navbar-light" style="background-color: #444">
+	
+	  <a class="navbar-brand" href="#">Rodrigo Amaral's Python Belt Exam</a>
+	  <a class="nav-item nav-link" href="/">Home</a>
+	
+	
+	  <form class="form-inline" action="/logoff">
+	    
+	    <button class="btn btn-secondary btn-md" type="submit">Logoff</button>
+	  </form>
+	</nav>
+
+<div class="container-fluid" style="margin-top: 10px;">
+	{% for trip in trips %}
+	<h1>{{trip.destination}}</h1>
+	<p><b>Description:</b> {{trip.desc}}</p>
+	<p><b>Travel Date From:</b> {{trip.trip_start}}</p>
+	<p><b>Travel Date to:</b> {{trip.trip_end}}</p>
+	<br>	
+<div class="container-fluid">
+	<h3>Other Users joining the tip:</h3>
+	{% for user in joinedusers %}
+	<h5>{{user.name}}</h5>
+	{% endfor %}
+	{% endfor %}
